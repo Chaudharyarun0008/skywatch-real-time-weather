@@ -1,0 +1,372 @@
+:root {
+    --bg: #0f172a;
+    --card: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+    --text: #ffffff;
+    --muted: #cbd5e1;
+    --primary: #38bdf8;
+    --secondary: #818cf8;
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.light-mode {
+    --bg: #e2e8f0;
+    --card: rgba(255, 255, 255, 0.7);
+    --border: rgba(255, 255, 255, 0.9);
+    --text: #0f172a;
+    --muted: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background: linear-gradient(-45deg,
+            var(--bg),
+            #1e293b,
+            #0f766e,
+            #312e81);
+    background-size: 400% 400%;
+    animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.glass-card {
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo i {
+    color: #facc15;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.theme-btn,
+.search-box button,
+.location-btn {
+    transition: 0.3s;
+}
+
+.theme-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-btn:hover,
+.search-box button:hover,
+.location-btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.search-box {
+    margin-top: 30px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-box select {
+    width: 300px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.location-btn {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #10b981;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section {
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+.clock-section .glass-card {
+    padding: 30px;
+    text-align: center;
+}
+
+#liveClock {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* WEATHER */
+.main-weather-card {
+    padding: 35px;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    color: #facc15;
+}
+
+.temperature {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.weather-tip {
+    margin-top: 15px;
+    color: var(--muted);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 25px;
+    text-align: center;
+}
+
+.stat-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.recent-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.recent-item {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.recent-item:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.hourly-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 130px;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.hour-card {
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.forecast-card {
+    padding: 20px;
+    text-align: center;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.loader-container {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-icons {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .temperature {
+        font-size: 3.5rem;
+    }
+
+    .weather-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
