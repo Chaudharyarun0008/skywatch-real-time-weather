@@ -7,11 +7,17 @@ Designed with a clean glassmorphism-inspired interface,skywatch-real-time-weathe
 🚀 Features :
 
 🌍 Real-Time Weather Updates
+
  Get current weather conditions for selected cities.
+ 
  Displays temperature, humidity, wind speed, pressure, visibility, and UV index.
+ 
 📍 Current Location Weather
+
  Uses the browser's Geolocation API to fetch weather data for the user's current location.
+ 
 🕒 Hourly Forecast
+
  View upcoming hourly temperature forecasts.
 📅 5-Day Weather Forecast
  Displays daily minimum and maximum temperatures for the next five days.
