@@ -1,4 +1,5 @@
 🌦️ skywatch-real-time-weather Dashbord
+
 skywatch-real-time-weather is a modern and responsive weather forecasting web application built using HTML, CSS, and JavaScript. The application provides real-time weather information, hourly forecasts, and 5-day weather predictions for cities across India using the Open-Meteo API.
 Designed with a clean glassmorphism-inspired interface,skywatch-real-time-weather offers an intuitive user experience with features such as geolocation-based weather detection.
 
